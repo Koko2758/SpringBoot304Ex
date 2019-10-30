@@ -30,6 +30,16 @@ public class Car {
     @Size(min=10)
     private String description;
 
+    public Car(@NotNull @Min(4) int year, @NotNull @Size(min = 2) String make, @NotNull @Size(min = 2) String model, @NotNull @Size(min = 10) String description) {
+        this.year = year;
+        this.make = make;
+        this.model = model;
+        this.description = description;
+    }
+
+    public Car() {
+    }
+
     public long getId() {
         return id;
     }
